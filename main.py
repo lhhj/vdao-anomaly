@@ -19,7 +19,7 @@ from archs.networks import optimizers
 from datasets.hdf5_vdao import VDAO
 
 np.random.seed(0)
-tf.set_random_seed(0)
+tf.random.set_seed(0)
 
 arch_names = sorted(name for name in archs.__dict__
                     if name.islower() and not name.startswith("__")
