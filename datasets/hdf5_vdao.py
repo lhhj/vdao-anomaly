@@ -293,8 +293,8 @@ def _loadFile(basepath, out_layer, vid_name_iter, exceptions=[], verbose=1):
             continue
         try:
             vid_name.append(filepath)
-            data.append(h5_file[filepath.format('X')].value)
-            labels.append(h5_file[filepath.format('y')].value)
+            data.append(h5_file[filepath.format('X')][()])
+            labels.append(h5_file[filepath.format('y')][()])
         except KeyError as exception:
             if mode is 'test':
                 raise exception

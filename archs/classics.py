@@ -4,7 +4,7 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
 from utils import Flatten
-import joblib
+from sklearn.externals import joblib
 
 import pdb
 
